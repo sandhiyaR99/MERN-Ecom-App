@@ -30,7 +30,7 @@ const Admin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/products', {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
